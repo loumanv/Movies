@@ -97,12 +97,7 @@
 		039DAB3020BC2CBC006F7A95 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				039DAB3120BC2CBC006F7A95 /* AppDelegate.swift */,
-				039DAB3320BC2CBC006F7A95 /* ViewController.swift */,
-				039DAB3520BC2CBC006F7A95 /* Main.storyboard */,
-				039DAB3820BC2CBD006F7A95 /* Assets.xcassets */,
-				039DAB3A20BC2CBD006F7A95 /* LaunchScreen.storyboard */,
-				039DAB3D20BC2CBD006F7A95 /* Info.plist */,
+				039DAB5F20BC2EE7006F7A95 /* App */,
 			);
 			path = Movies;
 			sourceTree = "<group>";
@@ -123,6 +118,59 @@
 				039DAB5320BC2CBD006F7A95 /* Info.plist */,
 			);
 			path = MoviesUITests;
+			sourceTree = "<group>";
+		};
+		039DAB5F20BC2EE7006F7A95 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				039DAB6020BC2EFA006F7A95 /* AppDelegate */,
+				039DAB6420BC2FA7006F7A95 /* Controllers */,
+				039DAB6120BC2F0F006F7A95 /* Resources */,
+				039DAB6220BC2F2B006F7A95 /* Supporting Files */,
+				039DAB6320BC2F41006F7A95 /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		039DAB6020BC2EFA006F7A95 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				039DAB3120BC2CBC006F7A95 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		039DAB6120BC2F0F006F7A95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				039DAB3820BC2CBD006F7A95 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		039DAB6220BC2F2B006F7A95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				039DAB3D20BC2CBD006F7A95 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		039DAB6320BC2F41006F7A95 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				039DAB3A20BC2CBD006F7A95 /* LaunchScreen.storyboard */,
+				039DAB3520BC2CBC006F7A95 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		039DAB6420BC2FA7006F7A95 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				039DAB3320BC2CBC006F7A95 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,7 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
-				INFOPLIST_FILE = Movies/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Movies/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +498,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
-				INFOPLIST_FILE = Movies/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Movies/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
