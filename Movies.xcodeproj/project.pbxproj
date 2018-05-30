@@ -16,6 +16,7 @@
 		039DAB3C20BC2CBD006F7A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 039DAB3A20BC2CBD006F7A95 /* LaunchScreen.storyboard */; };
 		039DAB5220BC2CBD006F7A95 /* MoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039DAB5120BC2CBD006F7A95 /* MoviesUITests.swift */; };
 		03A8AEF320BDB47E00F1766A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8AEF220BDB47E00F1766A /* Movie.swift */; };
+		03A8AEF820BDB8F900F1766A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A8AEF720BDB8F900F1766A /* Alamofire.framework */; };
 		03A8AEFF20BE049B00F1766A /* MovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8AEFE20BE049B00F1766A /* MovieTests.swift */; };
 		03A8AF0320BE081100F1766A /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8AF0220BE081100F1766A /* Factory.swift */; };
 		03A8AF0420BE087500F1766A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A8AEF220BDB47E00F1766A /* Movie.swift */; };
@@ -58,6 +59,7 @@
 		039DAB5120BC2CBD006F7A95 /* MoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITests.swift; sourceTree = "<group>"; };
 		039DAB5320BC2CBD006F7A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03A8AEF220BDB47E00F1766A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		03A8AEF720BDB8F900F1766A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		03A8AEFE20BE049B00F1766A /* MovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTests.swift; sourceTree = "<group>"; };
 		03A8AF0220BE081100F1766A /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		03A8AF0620BE10E600F1766A /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A8AEF820BDB8F900F1766A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +109,7 @@
 				039DAB4520BC2CBD006F7A95 /* MoviesTests */,
 				039DAB5020BC2CBD006F7A95 /* MoviesUITests */,
 				039DAB2F20BC2CBC006F7A95 /* Products */,
+				03A8AEF420BDB8E800F1766A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +222,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		03A8AEF420BDB8E800F1766A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03A8AEF720BDB8F900F1766A /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		03A8AEFA20BE040100F1766A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +284,7 @@
 				039DAB2B20BC2CBC006F7A95 /* Frameworks */,
 				039DAB2C20BC2CBC006F7A95 /* Resources */,
 				039DAB6520BC4D07006F7A95 /* SwiftLint */,
+				03A8AEF920BDB90C00F1766A /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -404,6 +417,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"/usr/local/bin:$PATH\"\nif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		03A8AEF920BDB90C00F1766A /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -597,6 +626,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Movies/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -615,6 +648,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K877UC2B8P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Movies/App/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
