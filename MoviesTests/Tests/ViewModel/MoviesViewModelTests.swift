@@ -30,6 +30,7 @@ class MoviesViewModelTests: XCTestCase {
         let expectedURL = URL(string: "http://www.telegraph.co.uk/content/dam/film/the%20revenant/leo-xlarge.jpg")
         XCTAssertEqual(viewModel.imageURLFor(row: 0), expectedURL)
         XCTAssertEqual(viewModel.titleFor(row: 0), "The revenant")
+        XCTAssertEqual(viewModel.ratingFor(row: 0), "4/5")
         XCTAssertEqual(viewModel.subtitleFor(row: 0), "156 mins | Action, Drama")
         XCTAssertEqual(viewModel.yearFor(row: 0), "(2015)")
         XCTAssertEqual(viewModel.descriptionFor(row: 0), "Leo's beautiful endurance test")

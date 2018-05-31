@@ -55,6 +55,11 @@ class MoviesViewModel: NSObject {
         return movie.headline
     }
 
+    func ratingFor(row: Int) -> String {
+        guard let movie = movies?[row], let rating = movie.rating else { return ""}
+        return "\(rating)/5"
+    }
+
     func subtitleFor(row: Int) -> String {
         guard let movie = movies?[row] else { return ""}
         var subtitle = ""

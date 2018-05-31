@@ -100,6 +100,7 @@ extension MoviesViewController: UICollectionViewDataSource {
             movieCell.imageView.af_setImage(withURL: imageUrl, imageTransition: .crossDissolve(0.30))
         }
         movieCell.titleLabel.text = viewModel.titleFor(row: indexPath.row)
+        movieCell.ratingLabel.text = viewModel.ratingFor(row: indexPath.row)
         movieCell.subtitleLabel.text = viewModel.subtitleFor(row: indexPath.row)
         movieCell.yearLabel.text = viewModel.yearFor(row: indexPath.row)
         movieCell.descriptionLabel.text = viewModel.descriptionFor(row: indexPath.row)

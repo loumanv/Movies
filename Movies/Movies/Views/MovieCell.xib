@@ -38,6 +38,12 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJt-UP-1b9" userLabel="rating">
+                        <rect key="frame" x="4" y="191" width="26" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="156 mins | Action, Drama" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="dVL-eM-uEc">
                         <rect key="frame" x="84" y="212.5" width="131.5" height="13.5"/>
                         <constraints>
@@ -105,6 +111,7 @@
                 <constraint firstItem="dVL-eM-uEc" firstAttribute="top" secondItem="lQa-qB-CaA" secondAttribute="bottom" id="J4I-SU-wFv"/>
                 <constraint firstAttribute="trailing" secondItem="nHS-YF-30U" secondAttribute="trailing" id="LM9-15-U9W"/>
                 <constraint firstItem="nHS-YF-30U" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.49" id="MLx-nf-zbr"/>
+                <constraint firstItem="xJt-UP-1b9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="N6v-VU-nZs"/>
                 <constraint firstAttribute="trailing" secondItem="GvE-wC-bce" secondAttribute="trailing" id="OgU-5B-xB3"/>
                 <constraint firstItem="dVL-eM-uEc" firstAttribute="top" secondItem="lQa-qB-CaA" secondAttribute="bottom" id="P29-ka-OyK"/>
                 <constraint firstItem="t66-eL-IDZ" firstAttribute="baseline" secondItem="lQa-qB-CaA" secondAttribute="baseline" id="S9A-vp-yH5"/>
@@ -113,6 +120,7 @@
                 <constraint firstItem="lQa-qB-CaA" firstAttribute="top" secondItem="W1C-uh-9nm" secondAttribute="bottom" constant="10" id="hXZ-Da-UF2"/>
                 <constraint firstItem="GvE-wC-bce" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nTu-wb-Pok"/>
                 <constraint firstItem="lQa-qB-CaA" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="rAt-V3-9hp"/>
+                <constraint firstItem="xJt-UP-1b9" firstAttribute="centerY" secondItem="lQa-qB-CaA" secondAttribute="centerY" id="uYM-rF-gDt"/>
                 <constraint firstItem="W1C-uh-9nm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zWW-vT-JsR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -123,12 +131,13 @@
                 <outlet property="descriptionLabel" destination="nHS-YF-30U" id="K2N-rm-2o0"/>
                 <outlet property="directorLabel" destination="Qmn-eo-Y8s" id="HIT-xz-bVh"/>
                 <outlet property="imageView" destination="W1C-uh-9nm" id="ybg-8j-oJp"/>
+                <outlet property="ratingLabel" destination="xJt-UP-1b9" id="yvB-fD-NXz"/>
                 <outlet property="subtitleLabel" destination="dVL-eM-uEc" id="eqx-MO-jpS"/>
                 <outlet property="synopsisLabel" destination="nHS-YF-30U" id="WuO-L5-KlF"/>
                 <outlet property="titleLabel" destination="lQa-qB-CaA" id="yFF-Ca-yO2"/>
                 <outlet property="yearLabel" destination="t66-eL-IDZ" id="PKf-H9-jIp"/>
             </connections>
-            <point key="canvasLocation" x="-251.5" y="-85"/>
+            <point key="canvasLocation" x="-445" y="-317"/>
         </collectionViewCell>
     </objects>
     <resources>
