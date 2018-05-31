@@ -63,7 +63,7 @@ class Movie {
         }
     }
 
-    func date(dateString: String?, format: String) -> Date? {
+    private func date(dateString: String?, format: String) -> Date? {
         guard let dateString = dateString else { return nil }
         let releaseDateFormatter = DateFormatter()
         releaseDateFormatter.locale = Locale.current

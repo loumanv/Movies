@@ -10,9 +10,9 @@ import Foundation
 
 class Author {
 
-    var name: String
-    var headshotURL: String?
-    var twitter: String?
+    internal var name: String
+    internal var headshotURL: String?
+    internal var twitter: String?
 
     init(dictionary: JSONDictionary) throws {
         guard let name = dictionary[APIConstants.Author.name] as? String else { throw MovieError.missingAuthorName}
