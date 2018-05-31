@@ -34,4 +34,9 @@ struct APIConstants {
         static let headshotURL = "headshot"
         static let twitter = "twitter"
     }
+
+    struct UrlStrings {
+        static let baseUrl = "https://s.telegraph.co.uk"
+        static let moviesUrl = "/tmgmobilepub/articles.json"
+    }
 }
