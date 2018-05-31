@@ -1,4 +1,4 @@
-# LocalWikipedia
+# Movies
 
 An iPhone app that displays reviews of the most popular movies of the week. The app is written in Swift and supports iOS 11+. Uses Carthage and Alamofire.
 
